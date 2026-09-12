@@ -1,6 +1,16 @@
 [gd_scene format=3 uid="uid://das8nbkyld8oa"]
 
 [ext_resource type="Script" uid="uid://dbelc7ipui7k0" path="res://Scripts/Test.gd" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://mj88ea8mmgv1" path="res://Scripts/PrimaryPhysicsTest.gd" id="2_0e48y"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_q4pru"]
 
 [node name="Node2D" type="Node2D" unique_id=593427532]
 script = ExtResource("1_wtcfe")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1005906804]
+scale = Vector2(10, 10)
+mesh = SubResource("SphereMesh_q4pru")
+script = ExtResource("2_0e48y")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=964982547]
